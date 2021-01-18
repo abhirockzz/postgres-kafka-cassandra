@@ -13,15 +13,6 @@ import (
 	_ "github.com/jackc/pgx/stdlib"
 )
 
-const createQ = `CREATE TABLE orders_info (
-	orderid SERIAL NOT NULL PRIMARY KEY,
-	custid INTEGER NOT NULL,
-	amount INTEGER NOT NULL,
-	city VARCHAR(255) NOT NULL
-  );`
-
-const dropQ = `drop TABLE orders_info`
-
 var db *sql.DB
 var cities []string
 
